@@ -1,11 +1,11 @@
 ![alt text](https://miro.medium.com/max/3840/1*GkWTK4BydcVe3d334SKsjg.jpeg)
 
 # Support Vector Machine Hot Dog Classifier
-A python implementation of *Support Vector Machine(SVM)* from scratch using the *Stochastic Gradient Descent(SGD)*.
+A python implementation of **Support Vector Machine(SVM)** from scratch using the **Stochastic Gradient Descent(SGD)**.
 A Hot Dog classifiier made using SVM.
 
 
-# SUPPORT VECTOR MACHINE (SVM)
+## SUPPORT VECTOR MACHINE (SVM)
 Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection.
 
 The advantages of support vector machines are:
@@ -27,17 +27,17 @@ The class yᵢ can either be a +ve or -ve (eg. spam=1, not-spam=-1)
 ![alt text](https://miro.medium.com/max/625/1*ala8WX2z47WYpn932hUkhA.jpeg)
 
 
-# Feature Engineering
+## Feature Engineering
 Machine learning algorithms operate on a dataset that is a collection of labeled examples which consist of features and a label i.e. in our case diagnosis is a label, [radius_mean, structure_mean, texture_mean…] features, and each row is an example.
 In most of the cases, the data you collect at first might be raw; its either incompatible with your model or hinders its performance. That’s when feature engineering comes to rescue. It encompasses preprocessing techniques to compile a dataset by extracting features from raw data. These techniques have two characteristics in common:
 1. Preparing the data which is compatible with the model
 2. Improving the performance of the machine learning algorithm
 
-## Normalization
+### Normalization
 It is one of the many feature engineering techniques that we are going to use. Normalization is the process of converting a range of values, into a standard range of values, typically in the interval [−1, 1] or [0, 1]. It’s not a strict requirement but it improves the speed of learning (e.g. faster convergence in gradient descent) and prevents numerical overflow.
 
 
-# Cost Function
+## Cost Function
 ![Cost Function](https://miro.medium.com/max/500/1*vn2HDrdqBsKN5rYw7rjO5w.png)
 Also known as the Objective Function. One of the building blocks of every machine learning algorithm, it’s the function we try to minimize or maximize to achieve our objective.
 *What’s our objective in SVM?* Our objective is to find a hyperplane that separates +ve and -ve examples with the largest margin while keeping the misclassification as low as possible (see Figure 3).
@@ -54,17 +54,35 @@ In this cost function, λ is essentially equal to 1/C and has the opposite effec
 We will stop the training when the current cost hasn’t decreased much as compared to the previous cost.
 
 
-# RESULTS WITH SCRATCH IMPLEMENTATIONS
+## RESULTS WITH SCRATCH IMPLEMENTATIONS
 
-## Without using Feature Selection
-Accuracy on test dataset: 95.36%
-Recall on test dataset: 92.34%
-Precision on test dataset: 92.34%
+### Without using Feature Selection
+1. Accuracy on test dataset: **95.36%**
+2. Recall on test dataset: **92.34%**
+3. Precision on test dataset: **92.34%**
 
-## With using Feature Selection
-Accuracy on test dataset: 96.74%
-Recall on test dataset: 95.34%
-Precision on test dataset: 95.34%
+### With using Feature Selection
+1. Accuracy on test dataset: **96.74%**
+2. Recall on test dataset: **95.34%**
+3. Precision on test dataset: **95.34%**
 
 
-# RESULTS using Scki
+## RESULTS using Scki-Learn
+
+### Without using Feature Selection
+1. Accuracy on test dataset: **97.82%**
+2. Recall on test dataset: **94.59%**
+3. Precision on test dataset: **94.59%**
+
+### With using Feature Selection
+1. Accuracy on test dataset: **99.09%**
+2. Recall on test dataset: **97.58%**
+3. Precision on test dataset: **97.58%**
+
+
+## Wanna Read More
+1. [SVM](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47)
+2. [Linear Regression](https://www.youtube.com/watch?v=nk2CQITm_eo)
+3. [SGD](https://towardsdatascience.com/https-towardsdatascience-com-why-stochastic-gradient-descent-works-9af5b9de09b8)
+4. [Basic Gradient Descent v/s SGD](https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent)
+5. [BackWard Elimination](https://www.javatpoint.com/backward-elimination-in-machine-learning)
