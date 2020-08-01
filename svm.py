@@ -54,8 +54,6 @@ def compute_cost(W, X, Y):
     return cost
 
 
-# I haven't tested it but this same function should work for
-# vanilla and mini-batch gradient descent as well
 def calculate_cost_gradient(W, X_batch, Y_batch):
     # if only one example is passed (eg. in case of SGD)
     if type(Y_batch) == np.float64:
@@ -123,7 +121,7 @@ def init():
     Y = data.loc[:, 'diagnosis']
     X = data.iloc[:, 1:]
 
-    # filter features
+    # filter features (remove these lines to see the output for result without feature selection)
     remove_correlated_features(X)
     remove_less_significant_features(X, Y)
 

@@ -26,6 +26,21 @@ The class yᵢ can either be a +ve or -ve (eg. spam=1, not-spam=-1)
 
 ![alt text](https://miro.medium.com/max/625/1*ala8WX2z47WYpn932hUkhA.jpeg)
 
+## STOCHASTIC GRADIENT DESCENT(SGD)
+The **Normal Gradient Descent** works like, we first randomly initialize the weights of our model. Using these weights we calculate the cost over all the data points in the training set. Then we compute the gradient of cost w.r.t the weights and finally, we update weights. And this process continues until we reach the minimum.
+The update step is something like this :-
+![GD](https://miro.medium.com/max/284/1*SRdydR97i52LmZtuRL8Rhg.png)
+
+ Now, what happens if the number of data points in our training set becomes large? say m = 10,000,000. In this case, we have to sum the cost of all the examples just to perform one update step!.
+
+> Instead of calculating the cost of all data points we calculate the cost of one single data point and the corresponding gradient. Then we update the weights.
+
+The update step looks like this :-
+![SGD](https://miro.medium.com/max/358/1*nT67GfNMNEjFBncJcAtQew.png)
+
+We can easily see that in this case update steps are performed very quickly and that is why we can reach the minimum in a very small amount of time.
+
+![Why SGD](https://miro.medium.com/max/875/1*OETN2wimt58AnHVelhdLpw.png)
 
 ## Feature Engineering
 Machine learning algorithms operate on a dataset that is a collection of labeled examples which consist of features and a label i.e. in our case diagnosis is a label, [radius_mean, structure_mean, texture_mean…] features, and each row is an example.
